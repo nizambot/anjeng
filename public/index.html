@@ -160,17 +160,6 @@
       refreshList();
     }
     refreshList();
-    // Hantar info ke logger.php
-    fetch("logger.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        userAgent: navigator.userAgent,
-        screen: `${screen.width}x${screen.height}`,
-        language: navigator.language,
-        platform: navigator.platform
-      })
-    });
   </script>
 </body>
   </html>
