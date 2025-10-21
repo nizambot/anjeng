@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
-  const response = await axios.get("https://api.github.com/repos/fressty/kampank/contents/token.json", {
+  const response = await axios.get("https://api.github.com/repos/nizambot/security/contents/tokendatabase.json", {
     headers: {
-      Authorization: "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"
+      Authorization: "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"
     }
   });
   const content = Buffer.from(response.data.content, 'base64').toString('utf-8');

@@ -3,9 +3,9 @@ import axios from 'axios';
 export default async function handler(req, res) {
   const body = await req.json();
 
-  const response = await axios.get("https://api.github.com/repos/fressty/kampank/contents/token.json", {
+  const response = await axios.get("https://api.github.com/repos/nizambot/security/contents/tokendatabase.json", {
     headers: {
-      Authorization: "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"
+      Authorization: "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"
     }
   });
 
@@ -19,13 +19,13 @@ export default async function handler(req, res) {
 
   const updatedContent = Buffer.from(JSON.stringify(json, null, 2)).toString('base64');
 
-  await axios.put("https://api.github.com/repos/fressty/kampank/contents/token.json", {
+  await axios.put("https://api.github.com/repos/nizambot/security/contents/tokendatabase.json", {
     message: "Menambahkan token baru",
     content: updatedContent,
     sha: sha
   }, {
     headers: {
-      Authorization: "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"
+      Authorization: "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"
     }
   });
 
